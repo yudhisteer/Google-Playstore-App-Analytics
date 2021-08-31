@@ -236,3 +236,10 @@ These apps can and will affect the overall analysis.
 4. Don’t be shy to price your Family or Medical app up to $80. People are willing to pay for such apps as long as they solve their problems with your solution.
 5. People download more free apps than paid apps but not by a lot. So if you feel your app should be a paid one, don’t hesitate to put a price on it.
 6. If you want good quality apps, opt for the paid ones.
+
+
+### References
+- Data Source: https://www.kaggle.com/lava18/google-play-store-apps
+- Lavanya Gupta: DataCamp Project Instructor and Data Source
+- Micromaster's UC San Diego: Python for Data Science Course
+- Hands on machine learning with scikit-learn and tensorflow - Aurelien Geron
