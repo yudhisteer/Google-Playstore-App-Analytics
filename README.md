@@ -221,6 +221,18 @@ It turns out that paid apps have a relatively lower number of installs than free
 ## 8. Sentiment Analysis of User Reviews
 Mining user review data to determine how people feel about your product, brand, or service can be done using a technique called **sentiment analysis**. User reviews for apps can be analyzed to identify if the mood is positive, negative or neutral about that app. For example, positive words in an app review might include words such as 'amazing', 'friendly', 'good', 'great', and 'love'. Negative words might be words like 'malware', 'hate', 'problem', 'refund', and 'incompetent'.
 
-()
+![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20132826.png)
 
 By plotting sentiment polarity scores of user reviews for paid and free apps, we observe that free apps receive a lot of harsh comments, as indicated by the outliers on the negative y-axis. Reviews for paid apps appear never to be extremely negative. This may indicate something about app quality, i.e., paid apps being of higher quality than free apps on average. The median polarity score for paid apps is a little higher than free apps, thereby syncing with our previous observation.
+
+## 9. Limitations of Analysis
+This dataset is based on data found in Google Play Store that is, only from Android users. A more conclusive argument could have been found if data from iOS App Store was available where we could get a bigger dataset and also analyze the ratings of the same app on the two platforms. Also, there are a lot of redundant apps(junk apps) on playstore. Although, I have cleaned them in my notebook, there are still some which are difficult to be spotted.
+These apps can and will affect the overall analysis.
+
+## 10. Conclusion
+1. Family and Game apps have the highest market prevalence. If we make such apps, it better be good as there are a lot of fierce competitors.
+2. Average App rating of app = 4.17. Unless we have a crappy app, we can be sure to receive good ratings.
+3. If we want our app to be on top of Play Store list, then make it less than 20MB and make it free or less than $10.
+4. Don’t be shy to price your Family or Medical app up to $80. People are willing to pay for such apps as long as they solve their problems with your solution.
+5. People download more free apps than paid apps but not by a lot. So if you feel your app should be a paid one, don’t hesitate to put a price on it.
+6. If you want good quality apps, opt for the paid ones.
