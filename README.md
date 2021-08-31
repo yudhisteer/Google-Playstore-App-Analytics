@@ -129,8 +129,6 @@ We will see that there are 33 unique app categories present in our dataset. Fami
 
 After having witnessed the market share for each category of apps, I analysed how all these apps perform on an average. App ratings (on a scale of 1 to 5) impact the discoverability, conversion of apps as well as the company's overall brand image. Ratings are a key performance indicator of an app.
 
-From our research, we found that the average volume of ratings across all app categories is 4.17. The histogram plot is skewed to the left indicating that the majority of the apps are highly rated with only a few exceptions in the low-rated apps.
-
 ```
 # Average rating of apps
 avg_app_rating = apps['Rating'].mean()
@@ -156,10 +154,24 @@ plotly.offline.iplot({'data': data, 'layout': layout})
 ```
 
 
+![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/newplot%20(1).png)
+
+From the research, I found that the average volume of ratings across all app categories is 4.17. The histogram plot is skewed to the left indicating that the majority of the apps are highly rated with only a few exceptions in the low-rated apps.
 
 
+## 5. Analysis of Size and Price of AppsRelatyion between Apps Category and Price
+
+For size, if the mobile app is too large, it may be difficult and/or expensive for users to download. Lengthy download times could turn users off before they even experience your mobile app. Plus, each user's device has a finite amount of disk space. For price, some users expect their apps to be free or inexpensive. These problems compound if the developing world is part of your target market; especially due to internet speeds, earning power and exchange rates.
+
+The analysis that follows will answer our research qurstions we postulated before starting the project.
+
+* Does the size of an app affect its rating?
+* Do users really care about system-heavy apps or do they prefer light-weighted apps?
+* Does the price of an app affect its rating?
+* Do users always prefer free apps over paid apps?
 
 
+We find that the majority of top rated apps (rating over 4) range from 2 MB to 20 MB. We also find that the vast majority of apps price themselves under $10.
 
 
 
