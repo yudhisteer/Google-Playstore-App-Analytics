@@ -170,8 +170,14 @@ The analysis that follows will answer our research qurstions we postulated befor
 * Does the price of an app affect its rating?
 * Do users always prefer free apps over paid apps?
 
+![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20131238.png)
 
-We find that the majority of top rated apps (rating over 4) range from 2 MB to 20 MB. We also find that the vast majority of apps price themselves under $10.
+I found that the majority of top rated apps (rating over 4) range from 2 MB to 20 MB. I also found that the vast majority of apps price themselves under $10.
 
+## 7. Analysis of popularity of Paid vs Free Apps
+The costs of apps are largely based on features, complexity, and platform.
 
+There are many factors to consider when selecting the right pricing strategy for a mobile app. It is important to consider the willingness of the customer to pay for an app. A wrong price could break the deal before the download even happens. Potential customers could be turned off by what they perceive to be a shocking cost, or they might delete an app they’ve downloaded after receiving too many ads or simply not getting their money's worth.
+
+Different categories demand different price ranges. Some apps that are simple and used daily, like the calculator app, should probably be kept free. However, it would make sense to charge for a highly-specialized medical app that diagnoses diabetic patients. Below, we see that Medical and Family apps are the most expensive. Some medical apps extend even up to $80! All game apps are reasonably priced below $20.
 
