@@ -226,8 +226,8 @@ Mining user review data to determine how people feel about your product, brand, 
 By plotting sentiment polarity scores of user reviews for paid and free apps, we observe that free apps receive a lot of harsh comments, as indicated by the outliers on the negative y-axis. Reviews for paid apps appear never to be extremely negative. This may indicate something about app quality, i.e., paid apps being of higher quality than free apps on average. The median polarity score for paid apps is a little higher than free apps, thereby syncing with our previous observation.
 
 ## 9. Limitations of Analysis
-This dataset is based on data found in Google Play Store that is, only from Android users. A more conclusive argument could have been found if data from iOS App Store was available where we could get a bigger dataset and also analyze the ratings of the same app on the two platforms. Also, there are a lot of redundant apps(junk apps) on playstore. Although, I have cleaned them in my notebook, there are still some which are difficult to be spotted.
-These apps can and will affect the overall analysis.
+This dataset is based on data found on Google Play Store only, that is only from Android users. A more conclusive argument could have been made if data from iOS App Store was available where we could get a bigger dataset and also analyze the ratings of the same app on the two platforms. Also, there are a lot of redundant apps(junk apps) on playstore. Although, I have cleaned them in my notebook, there are still some which are difficult to be spotted.
+These apps affects the overall analysis.
 
 ## 10. Conclusion
 1. Family and Game apps have the highest market prevalence. If we make such apps, it better be good as there are a lot of fierce competitors.
