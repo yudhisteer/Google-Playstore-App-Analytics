@@ -95,7 +95,7 @@ This brings us to the following questions:
 * Is any specific category dominating the market?
 * Which categories have the fewest number of apps?
 
-We will see that there are 33 unique app categories present in our dataset. Family and Game apps have the highest market prevalence. Interestingly, Tools, Business and Medical apps are also at the top.
+
 
 ```
 import plotly
@@ -121,11 +121,39 @@ plotly.offline.iplot(data)
 ```
 
 
+![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/newplot.png)
 
+We will see that there are 33 unique app categories present in our dataset. Family and Game apps have the highest market prevalence. Interestingly, Tools, Business and Medical apps are also at the top.
 
+## 4. Distribution of App Ratings
 
+After having witnessed the market share for each category of apps, I analysed how all these apps perform on an average. App ratings (on a scale of 1 to 5) impact the discoverability, conversion of apps as well as the company's overall brand image. Ratings are a key performance indicator of an app.
 
+From our research, we found that the average volume of ratings across all app categories is 4.17. The histogram plot is skewed to the left indicating that the majority of the apps are highly rated with only a few exceptions in the low-rated apps.
 
+```
+# Average rating of apps
+avg_app_rating = apps['Rating'].mean()
+print('Average app rating = ', avg_app_rating)
+
+# Distribution of apps according to their ratings
+data = [go.Histogram(
+        x = apps['Rating']
+)]
+
+# Vertical dashed line to indicate the average app rating
+layout = {'shapes': [{
+              'type' :'line',
+              'x0': avg_app_rating,
+              'y0': 0,
+              'x1': avg_app_rating,
+              'y1': 1000,
+              'line': { 'dash': 'dashdot'}
+          }]
+          }
+
+plotly.offline.iplot({'data': data, 'layout': layout})
+```
 
 
 
