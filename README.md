@@ -189,3 +189,38 @@ It looks like a bunch of the really expensive apps are "junk" apps. That is, app
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20132023.png)
 
 
+## 7. Analysis of popularity of Paid vs Free Apps
+For apps in the Play Store today, there are five types of pricing strategies: 
+1. Free 
+2. Freemium 
+3. Paid 
+4. Paymium
+5. Subscription. 
+
+
+We'll focus on free and paid apps only. Some characteristics of free apps are:
+
+* Free to download.
+* Main source of income often comes from advertisements.
+* Often created by companies that have other products and the app serves as an extension of those products.
+* Can serve as a tool for customer retention, communication, and customer service.
+
+
+Some characteristics of paid apps are:
+
+* Users are asked to pay once for the app to download and use it.
+* The user can't really get a feel for the app before buying it.
+
+
+Are paid apps installed as much as free apps?
+
+![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/newplot%20(2).png)
+
+It turns out that paid apps have a relatively lower number of installs than free apps, though the difference is not as stark as I would have expected!
+
+## 8. Sentiment Analysis of User Reviews
+Mining user review data to determine how people feel about your product, brand, or service can be done using a technique called **sentiment analysis**. User reviews for apps can be analyzed to identify if the mood is positive, negative or neutral about that app. For example, positive words in an app review might include words such as 'amazing', 'friendly', 'good', 'great', and 'love'. Negative words might be words like 'malware', 'hate', 'problem', 'refund', and 'incompetent'.
+
+()
+
+By plotting sentiment polarity scores of user reviews for paid and free apps, we observe that free apps receive a lot of harsh comments, as indicated by the outliers on the negative y-axis. Reviews for paid apps appear never to be extremely negative. This may indicate something about app quality, i.e., paid apps being of higher quality than free apps on average. The median polarity score for paid apps is a little higher than free apps, thereby syncing with our previous observation.
