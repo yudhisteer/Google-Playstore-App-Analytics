@@ -22,7 +22,7 @@ The analytical methods below were used to answer the research questions above:
 
 
 ## Abstract
-In this Google Play Store Apps Dataset, I wanted to find out what makes some apps better than others? Why some apps more popular than others? What factors should we take into consideration when designing an app for it to be a first-class app? In this analysis, I found out that size and price affects the number of downloads and they are inversely proportional. While Game apps are popular, Family apps have the biggest market prevalence. People are willing to pay up to $80 for an app as long as it brings them value. Jointplots, strip plots, barcharts and histograms were used to come to these conclusions.
+In this project, I wanted to find out what makes some apps better than others. Why some apps more popular than others? What factors should we take into consideration when designing an app for it to be a first-class app? In this analysis, I found out that size and price affects the number of downloads and they are inversely proportional. While Game apps are popular, Family apps have the biggest market prevalence. People are willing to pay up to $80 for an app as long as it brings them value.
 
 ## Dataset(s)
 The dataset is from Kaggle: https://www.kaggle.com/lava18/google-play-store-apps
