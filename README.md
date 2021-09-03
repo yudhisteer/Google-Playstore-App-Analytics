@@ -36,7 +36,7 @@ The dataset is from Kaggle: https://www.kaggle.com/lava18/google-play-store-apps
 2) Data Wrangling
 3) Exploring App Categories
 4) Distribution of App Ratings
-5) Analysis of Size and Price of AppsRelatyion between Apps Category and Price
+5) Analysis of Size and Price of Apps
 6) Filtering of Junk Apps
 7) Analysis of popularity of Paid vs Free Apps
 8) Sentiment Analysis of User Reviews
@@ -159,7 +159,7 @@ plotly.offline.iplot({'data': data, 'layout': layout})
 From the research, I found that the average volume of ratings across all app categories is 4.17. The histogram plot is skewed to the left indicating that the majority of the apps are highly rated with only a few exceptions in the low-rated apps.
 
 
-## 5. Analysis of Size and Price of AppsRelatyion between Apps Category and Price
+## 5. Analysis of Size and Price of Apps
 
 For size, if the mobile app is too large, it may be difficult and/or expensive for users to download. Lengthy download times could turn users off before they even experience your mobile app. Plus, each user's device has a finite amount of disk space. For price, some users expect their apps to be free or inexpensive. These problems compound if the developing world is part of your target market; especially due to internet speeds, earning power and exchange rates.
 
@@ -169,6 +169,25 @@ The analysis that follows will answer our research qurstions we postulated befor
 * Do users really care about system-heavy apps or do they prefer light-weighted apps?
 * Does the price of an app affect its rating?
 * Do users always prefer free apps over paid apps?
+
+```
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
+fig.set_size_inches(15, 8)
+
+# Select a few popular app categories
+popular_app_cats = apps[apps.Category.isin(['GAME', 'FAMILY', 'PHOTOGRAPHY',
+                                            'MEDICAL', 'TOOLS', 'FINANCE',
+                                            'LIFESTYLE','BUSINESS'])]
+
+# Examine the price trend by plotting Price vs Category
+ax = sns.stripplot(x = popular_app_cats["Category"], y = popular_app_cats["Price"], jitter=True, linewidth=1)
+ax.set_title('App pricing trend across categories')
+
+# Apps whose Price is greater than 200
+apps_above_200 = popular_app_cats[popular_app_cats['Price'] > 200]
+apps_above_200[['Category', 'App', 'Price']]
+```
 
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20131238.png)
 
