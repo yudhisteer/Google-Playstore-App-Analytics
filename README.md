@@ -185,6 +185,17 @@ Different categories demand different price ranges. Some apps that are simple an
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20131632.png)
 
 It looks like a bunch of the really expensive apps are "junk" apps. That is, apps that don't really have a purpose. Some app developer may create an app called I Am Rich Premium or most expensive app (H) just for a joke or to test their app development skills. Some developers even do this with malicious intent and try to make money by hoping people accidentally click purchase on their app in the store. We will only take apps whose price is below $100.
+```
+# Select apps priced below $100
+apps_under_100 = popular_app_cats[popular_app_cats['Price'] < 100]
+
+fig, ax = plt.subplots()
+fig.set_size_inches(15, 8)
+
+# Examine price vs category with the authentic apps (apps_under_100)
+ax = sns.stripplot(x = "Category", y = "Price", data = apps_under_100, jitter = True, linewidth = 1)
+ax.set_title('App pricing trend across categories after filtering for junk apps')
+```
 
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20132023.png)
 
@@ -211,6 +222,31 @@ Some characteristics of paid apps are:
 * Users are asked to pay once for the app to download and use it.
 * The user can't really get a feel for the app before buying it.
 
+```
+trace0 = go.Box(
+    # Data for paid apps
+    y = apps[apps['Type'] == 'Paid']['Installs'],
+    name = 'Paid'
+)
+
+trace1 = go.Box(
+    # Data for free apps
+    y = apps[apps['Type'] == 'Free']['Installs'],
+    name = 'Free'
+)
+
+layout = go.Layout(
+    title = "Number of downloads of paid apps vs. free apps",
+    yaxis = dict(title = "Log number of downloads",
+                type = 'log',
+                autorange = True)
+)
+
+# Add trace0 and trace1 to a list for plotting
+data = [trace0, trace1]
+plotly.offline.iplot({'data': data, 'layout': layout})
+```
+
 
 Are paid apps installed as much as free apps?
 
@@ -220,6 +256,25 @@ It turns out that paid apps have a relatively lower number of installs than free
 
 ## 8. Sentiment Analysis of User Reviews
 Mining user review data to determine how people feel about your product, brand, or service can be done using a technique called **sentiment analysis**. User reviews for apps can be analyzed to identify if the mood is positive, negative or neutral about that app. For example, positive words in an app review might include words such as 'amazing', 'friendly', 'good', 'great', and 'love'. Negative words might be words like 'malware', 'hate', 'problem', 'refund', and 'incompetent'.
+
+```
+# Load user_reviews.csv
+reviews_df = pd.read_csv('datasets/user_reviews.csv')
+
+# Join the two dataframes
+merged_df = apps.merge(reviews_df)
+
+# Drop NA values from Sentiment and Review columns
+merged_df = merged_df.dropna(subset = ['Sentiment', 'Review'])
+
+sns.set_style('ticks')
+fig, ax = plt.subplots()
+fig.set_size_inches(11, 8)
+
+# User review sentiment polarity for paid vs. free apps
+ax = sns.boxplot(x = 'Type', y = 'Sentiment_Polarity', data = merged_df)
+ax.set_title('Sentiment Polarity Distribution')
+```
 
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20132826.png)
 
