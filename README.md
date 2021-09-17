@@ -87,7 +87,7 @@ print(apps.info())
 ```
 ## 3. Exploring App Categories
 
-With more than 1 billion active users in 190 countries around the world, Google Play continues to be an important distribution platform to build a global audience. For businesses to get their apps in front of users, it's important to make them more quickly and easily discoverable on Google Play. To improve the overall search experience, Google has introduced the concept of grouping apps into categories.
+In 2020, Google Play users worldwide downloaded 108.5 billion mobile apps, up from 76 billion apps in 2018. Google Play continues to be an important distribution platform to build a global audience. For an app developer or businesses to grasp the attention of users with their apps, it is principal to make them easy and quickly to be discovered on the platofrm. To create a better user experience, Google Play has introduced the concept of grouping apps into categories.
 
 This brings us to the following questions:
 
@@ -123,11 +123,11 @@ plotly.offline.iplot(data)
 
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/newplot.png)
 
-We will see that there are 33 unique app categories present in our dataset. Family and Game apps have the highest market prevalence. Interestingly, Tools, Business and Medical apps are also at the top.
+We will see that there are 33 unique app categories present in our dataset. Family and Game apps have the highest market prevalence. Surprisingly, Tools, Business and Medical apps are also at the top.
 
 ## 4. Distribution of App Ratings
 
-After having witnessed the market share for each category of apps, I analysed how all these apps perform on an average. App ratings (on a scale of 1 to 5) impact the discoverability, conversion of apps as well as the company's overall brand image. Ratings are a key performance indicator of an app.
+After having witnessed the market share for each category of apps, I analysed how all these apps perform on an average. There is no doubt that ratings provides an indication of the quality and performance of an app. App ratings (on a scale of 1 to 5) impact the discoverability, conversion of apps as well as the company's overall brand image.
 
 ```
 # Average rating of apps
@@ -161,7 +161,7 @@ From the research, I found that the average volume of ratings across all app cat
 
 ## 5. Analysis of Size and Price of Apps
 
-For size, if the mobile app is too large, it may be difficult and/or expensive for users to download. Lengthy download times could turn users off before they even experience your mobile app. Plus, each user's device has a finite amount of disk space. For price, some users expect their apps to be free or inexpensive. These problems compound if the developing world is part of your target market; especially due to internet speeds, earning power and exchange rates.
+If the size of your mobile app is too large, it may be an issue for the users to download it. Even the time taken to download an app could turn users off before they even experience your mobile app. Moreover, user's will have a finite amount of space on their device. They will use it carefully before considering downloading an app. Another factor affecting the download of an app is price. User's expect an app to be free or low-priced. These problems compound if the developing world is part of your target market; especially due to internet speeds, earning power and exchange rates.
 
 The analysis that follows will answer our research qurstions we postulated before starting the project.
 
