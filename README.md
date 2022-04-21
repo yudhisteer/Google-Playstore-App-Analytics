@@ -46,7 +46,7 @@ The dataset is from Kaggle: https://www.kaggle.com/lava18/google-play-store-apps
 ## 1. Load Dataset
 The first step is to load in the dataset. Remove any duplicate values which might be present. Analyse the number of data points present and print teh first five rows of the dataset.
 
-```
+```python
 # Read in dataset
 import pandas as pd
 apps_with_duplicates = pd.read_csv("datasets/apps.csv")
@@ -69,7 +69,7 @@ When it comes to Data Wrangling, I believe it follows the **Pareto Principle** w
 By looking at a random sample of the dataset rows (from the above task), we observe that some entries in the columns like “Installs" and "Price" have a few special characters ("+" "," "$") due to the way the numbers have been represented. This prevents the columns from being purely numeric, making it difficult to use them in subsequent future mathematical calculations. Ideally, we would want these columns to contain only digits from [0-9].
 Specifically, the special characters "," and "+" present in "Installs" column and "$" present in "Price" column need to be removed.
 
-```
+```python
 # List of characters to remove
 chars_to_remove = ["+", ",", "$"]
 # List of column names to clean
@@ -97,7 +97,7 @@ This brings us to the following questions:
 
 
 
-```
+```python
 import plotly
 plotly.offline.init_notebook_mode(connected=True)
 import plotly.graph_objs as go
@@ -129,7 +129,7 @@ We will see that there are 33 unique app categories present in our dataset. Fami
 
 After having witnessed the market share for each category of apps, I analysed how all these apps perform on an average. There is no doubt that ratings provides an indication of the quality and performance of an app. App ratings (on a scale of 1 to 5) impact the discoverability, conversion of apps as well as the company's overall brand image.
 
-```
+```python
 # Average rating of apps
 avg_app_rating = apps['Rating'].mean()
 print('Average app rating = ', avg_app_rating)
@@ -170,7 +170,7 @@ The analysis that follows will answer our research qurstions we postulated befor
 * Does the price of an app affect its rating?
 * Do users always prefer free apps over paid apps?
 
-```
+```python
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 fig.set_size_inches(15, 8)
@@ -204,7 +204,8 @@ Different categories demand different price ranges. Some apps that are simple an
 ![alt text](https://github.com/yudhisteer/Google-Playstore-App-Analytics/blob/main/Plots/Screenshot%202021-08-31%20131632.png)
 
 It looks like a bunch of the really expensive apps are "junk" apps. That is, apps that don't really have a purpose. Some app developer may create an app called I Am Rich Premium or most expensive app (H) just for a joke or to test their app development skills. Some developers even do this with malicious intent and try to make money by hoping people accidentally click purchase on their app in the store. We will only take apps whose price is below $100.
-```
+
+```python
 # Select apps priced below $100
 apps_under_100 = popular_app_cats[popular_app_cats['Price'] < 100]
 
@@ -241,7 +242,7 @@ Some characteristics of paid apps are:
 * Users are asked to pay once for the app to download and use it.
 * The user can't really get a feel for the app before buying it.
 
-```
+```python
 trace0 = go.Box(
     # Data for paid apps
     y = apps[apps['Type'] == 'Paid']['Installs'],
@@ -276,7 +277,7 @@ It turns out that paid apps have a relatively lower number of installs than free
 ## 8. Sentiment Analysis of User Reviews
 Mining user review data to determine how people feel about your product, brand, or service can be done using a technique called **sentiment analysis**. User reviews for apps can be analyzed to identify if the mood is positive, negative or neutral about that app. For example, positive words in an app review might include words such as 'amazing', 'friendly', 'good', 'great', and 'love'. Negative words might be words like 'malware', 'hate', 'problem', 'refund', and 'incompetent'.
 
-```
+```python
 # Load user_reviews.csv
 reviews_df = pd.read_csv('datasets/user_reviews.csv')
 
